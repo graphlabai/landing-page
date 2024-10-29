@@ -1,0 +1,72 @@
+---
+const features = [
+  {
+    header: "Lav",
+    title: "Minimumsimplementering",
+    description:
+      "Noen bedrifter lar ansatte bruke enkle verktøy som ChatGPT eller Microsoft Copilot for daglige oppgaver, uten å gå noe dypere. Dette gir et minimum av verdi, og gjør at man går glipp av store muligheter for konkurransedyktige bedrifter.",
+  },
+
+  {
+    header: "Medium",
+    title: "Interne team",
+    description:
+      "Andre større selskaper oppretter egne innovasjonsteam for å utforske AI-muligheter, men disse teamene sliter ofte med å skape konkrete løsninger med høy avkastning. Kostnaden for slike interne team kan dessuten være svært høy, uten at det nødvendigvis gir en betydelig konkurransefordel.",
+  },
+
+  {
+    header: "Høy",
+    title: "Strategisk samarbeid  ",
+    description:
+      "En mer kostnadseffektiv og konkurransedyktig tilnærming er å inngå strategisk samarbeid med eksterne spesialister som <span class='font-medium text-regent-900'>GraphLab</span>. Våre erfarne team har dyptgående kunnskap innen produktutvikling og AI, og utvikler AI-løsninger som gir høy verdi til våre samarbeidspartnere.",
+  },
+];
+---
+
+<section>
+  <div class="px-8 pt-12 mx-auto md:px-12 lg:px-24 max-w-7xl lg:pt-32">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-24 items-end">
+      <div>
+        <span class="uppercase tracking-wide font-medium text-regent-600">
+          ⏤ kompetansebehov
+        </span>
+        <p class="mt-16 text-2xl lg:text-4xl text-black">
+          Hvordan sikre din bedrifts kompetansebehov for AI-utvikling
+        </p>
+      </div>
+      <div>
+        <p class="text-gray-500 text-lg lg:text-xl tracking-wide text-balance">
+          For å utnytte potensialet som ligger i AI kreves det høy teknisk og
+          juridisk kompetanse. Utviklingen innenfor AI øker i eksponentiell
+          fart. Det er en stor utfordring for mange å ha den nødvendige
+          innsikten og tekniske ferdighetene til å bygge verdifulle AI-løsninger
+          internt.
+        </p>
+      </div>
+    </div>
+    <div class="grid gap-12 lg:grid-cols-3 mt-24">
+      {
+        features.map((feature, index) => (
+          <div class="p-3">
+            <p class="text-regent-500 text-lg text-medium font-mono">
+              {String(index + 1).padStart(2, "0")}. {feature.header}
+            </p>
+
+            <p class="text-black mt-8 font-medium text-xl">{feature.title}</p>
+            <p
+              class="text-gray-500 mt-6 text-lg lg:text-xl tracking-wide"
+              set:html={feature.description}
+            />
+          </div>
+        ))
+      }
+    </div>
+  </div>
+  <div class="flex flex-col -mb-px gap-12 mt-24 pb-12 lg:pb-32">
+    <div class="relative hidden lg:block overflow-hidden">
+      <div class="overflow-hidden w-full bg-lila-500">
+        <img alt="#_" src="/images/ui6.png" class="w-full" />
+      </div>
+    </div>
+  </div>
+</section>

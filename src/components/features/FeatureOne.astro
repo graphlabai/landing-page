@@ -1,0 +1,63 @@
+---
+const features = [
+  {
+    title: "Enkel AI-strategi",
+    description:
+      "Vi hjelper deg med å utvikle en gjennomførbar AI-plan ved å identifisere ineffektiviteter, tilby steg-for-steg implementering og sikre at løsningen er tilpasset din bedrift.",
+  },
+  {
+    title: "Ubekymret personvern og GDPR-navigasjon",
+    description:
+      "Vårt team sørger for at din AI-strategi er 100% i tråd med europeiske og norske personvernregler — for å styrke omdømmet blant kunder og partnere.",
+  },
+  {
+    title: "Løpende opplæring og støtte",
+    description:
+      "Våre førsteklasses konsulenter gir deg og ditt team praktisk kunnskap for å utnytte AI-muligheter, med forståelse for dens begrensninger.",
+  },
+  {
+    title: "Sikker og effektiv AI-infrastruktur",
+    description:
+      "GraphLab håndterer hosting, sikkerhet og oppdateringer, enten du ønsker skylagring eller lokal hosting, tilpasset din virksomhet.",
+  },
+];
+---
+
+<section>
+  <div class="px-8 py-12 mx-auto md:px-12 lg:px-24 max-w-7xl lg:py-32">
+    <span class="uppercase tracking-wide font-medium text-regent-600">
+      ⏤ verdiskapning med kunstig intelligens
+    </span>
+
+    <p class="mt-16 text-2xl lg:text-4xl text-black">
+      Vi hjelper innovative organisasjoner med å utvikle skreddersydde veikart,
+      AI-strategiutvikling, compliance-rådgivning og teknisk implementering av
+      AI-løsninger.
+    </p>
+  </div>
+  <div
+    class="flex flex-col -mb-px lg:grid-cols-2 max-w-7xl mx-auto justify-center items-center lg:grid mt-8"
+  >
+    <div
+      class="grid lg:grid-cols-1 gap-12 items-start md:px-12 lg:px-40 2xl:px-24 p-8"
+    >
+      {
+        features.map((feature, index) => (
+          <div>
+            <p class="text-regent-600 text-lg text-medium font-mono">
+              {String(index + 1).padStart(2, "0")}
+            </p>
+
+            <p class="text-black mt-8 font-medium text-xl">{feature.title}</p>
+            <p class="text-gray-500 mt-6 text-lg lg:text-xl tracking-wide">
+              {feature.description}
+            </p>
+          </div>
+        ))
+      }
+    </div>
+    <div class="bg-regent-500 p-8 md:px-12 lg:px-32 h-full">
+      <img alt="#_" src="/images/ui1.png" class="w-full h-full" />
+    </div>
+  </div>
+</section>

@@ -1,0 +1,72 @@
+---
+const features = [
+  {
+    title: "Automatisering av tidkrevende oppgaver",
+    description:
+      "Generativ AI kan håndtere tidkrevende manuelle oppgaver raskere og mer effektivt.",
+  },
+  {
+    title: "Strukturering av ustrukturert data",
+    description:
+      "Forvandle ustrukturert data som dokumenter og kontrakter til søkbare, analyserbare formater som gir ny innsikt.",
+  },
+  {
+    title: "Personlige assistanseverktøy",
+    description:
+      "Utvikle Copilot-løsninger som har tilgang til og forstår bedriftens egne dokumenter og prosesser.",
+  },
+  {
+    title: "Datavasking og kvalitetsforbedring",
+    description:
+      "Generativ AI kan rense data og forbedre datakvaliteten, noe som gir grunnlag for mer presise analyser og innsikt.",
+  },
+  {
+    title: "Intelligent kundeservice",
+    description:
+      "Bruke AI-baserte chatbots og virtuelle assistenter for å forbedre kundeopplevelser gjennom raskere og mer relevante svar.",
+  },
+  {
+    title: "Beslutningsstøtte gjennom kunnskapsgrafer",
+    description:
+      "Bruke AI for å lage kunnskapsgrafer som hjelper til med bedre beslutningstaking ved å koble sammen og analysere kompleks informasjon.",
+  },
+];
+---
+
+<section>
+  <div class="px-8 py-12 mx-auto md:px-12 lg:px-24 max-w-7xl lg:py-32">
+    <div>
+      <span class="uppercase tracking-wide font-medium text-regent-600">
+        ⏤ verdiskapning med kunstig intelligens
+      </span>
+      <p class="mt-16 text-2xl lg:text-4xl text-black">
+        Kunstig intelligens kan skape store gevinster for både små og store
+        bedrifter ved å effektivisere utdaterte, manuelle arbeidsprosesser,
+        strukturere uorganisert data og redusere tidkrevende oppgaver til en
+        brøkdel av tiden.
+      </p>
+    </div>
+    <ul
+      class="grid md:grid-cols-2 lg:mt-24 mt-12 gap-6 lg:gap-12 lg:grid-cols-3"
+      role="list"
+    >
+      {
+        features.map((feature, index) => (
+          <li>
+            <div>
+              <span class="text-lg text-medium text-regent-600 font-mono">
+                {String(index + 1).padStart(2, "0")}
+              </span>
+              <p class="text-black mt-8 font-medium lg:text-3xl text-xl">
+                {feature.title}
+              </p>
+            </div>
+            <p class="text-gray-500 mt-6 text-lg lg:text-xl tracking-wide">
+              {feature.description}
+            </p>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+</section>

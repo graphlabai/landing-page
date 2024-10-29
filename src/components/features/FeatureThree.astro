@@ -1,0 +1,64 @@
+---
+const features = [
+  {
+    title: "Utvikle et solid perspektiv på hvor generativ AI skaper verdi.",
+    description:
+      "Sørg for at organisasjonen prioriterer investeringer med en tydelig forståelse av hvordan og hvor generativ AI kan tilføre verdi, og hva denne verdien innebærer.",
+  },
+  {
+    title: "Etabler klar, omfattende og helhetlig styring",
+    description:
+      "for implementeringen av generativ AI med fokus på sentral oversikt og sentralisert ressursfordeling. Dette sikrer fremgang i prioriterte områder på tvers av organisasjonen og gir veiledning og kontroll for ansvarlig bruk.",
+  },
+  {
+    title: "Omform arbeidsmåter i stedet for bare å automatisere oppgaver. ",
+    description:
+      "Ta et bredere perspektiv på implementeringen av generativ AI som går utover de tekniske aspektene, slik at teknologien integreres i daglige arbeidsprosesser.",
+  },
+];
+---
+
+<section>
+  <div class="px-8 pt-12 mx-auto md:px-12 lg:px-24 max-w-7xl lg:pt-32">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-24 items-end">
+      <div>
+        <span class="uppercase tracking-wide font-medium text-regent-600">
+          ⏤ strategi for ai
+        </span>
+        <p class="mt-16 text-2xl lg:text-4xl text-black">
+          Hvordan oppnå optimal verdiskaping med generativ kunstig intelligens
+        </p>
+      </div>
+      <div>
+        <p class="text-gray-500 text-lg lg:text-xl tracking-wide text-balance">
+          Generativ AI er en altfor viktig teknologi til å overlates til
+          tilfeldighetene. Vi mener spesielt at selskaper bør etablere
+          strukturer og prosesser som gjør det mulig å oppnå tre hovedmål:
+        </p>
+      </div>
+    </div>
+    <div class="grid gap-12 lg:grid-cols-3 mt-24">
+      {
+        features.map((feature, index) => (
+          <div>
+            <p class="text-regent-600 text-lg text-medium font-mono">
+              {String(index + 1).padStart(2, "0")}
+            </p>
+
+            <p class="text-black mt-8 font-medium text-xl">{feature.title}</p>
+            <p class="text-gray-500 mt-6 text-lg lg:text-xl tracking-wide">
+              {feature.description}
+            </p>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+  <div class="flex flex-col -mb-px gap-12 mt-24 pb-12 lg:pb-32">
+    <div class="relative hidden lg:block overflow-hidden">
+      <div class="overflow-hidden w-full bg-lila-500">
+        <img alt="#_" src="/images/ui6.png" class="w-full" />
+      </div>
+    </div>
+  </div>
+</section>
