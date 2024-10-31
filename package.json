@@ -19,6 +19,7 @@
     "astro": "^4.5.12"
   },
   "dependencies": {
+    "@astrojs/node": "^8.3.4",
     "astro-devtool-breakpoints": "^0.3.0"
   }
 }
