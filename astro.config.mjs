@@ -16,8 +16,8 @@ export default defineConfig({
     skipInline: false,
     drafts: true,
   },
-  site: "https://graphlab.github.io",
-  base: "/landing-page",
+  site: "https://graphlab.ai",
+  base: "/",
   integrations: [tailwind(), sitemap(), mdx(), devtoolBreakpoints()],
   output: "static",
 });
