@@ -6,8 +6,8 @@ const {
   title = "GraphLab",
   description = "AI konsultasjon - fra strategi til implementering",
   url,
-  socialImage = "/social-preview-image.png",
-  twitterImage = "/images/graphlab-man-9.png", // Assuming you have a separate image for Twitter
+  socialImage = "images/graphlab-man-9.png",
+  twitterImage = "images/graphlab-man-9.png", // Assuming you have a separate image for Twitter
 } = Astro.props;
 const sanitizedTitle = title.toLowerCase().replaceAll(" ", "-");
 ---
@@ -15,10 +15,8 @@ const sanitizedTitle = title.toLowerCase().replaceAll(" ", "-");
 <Metas
   title={title}
   description={description.substring(0, 100)}
-  url={Astro.site
-    ? `${Astro.site}/${sanitizedTitle}`
-    : `https://graphlab.no/${sanitizedTitle}`}
-  image={socialImage}
+  url={Astro.site ? `${Astro.site}}` : `https://graphlab.ai/`}
+  socialImage={socialImage}
   twitterImage={twitterImage}
 />
 <Favicons />
