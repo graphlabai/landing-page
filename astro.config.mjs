@@ -16,12 +16,8 @@ export default defineConfig({
     skipInline: false,
     drafts: true,
   },
-  site: "https://lexingtonthemes.com",
+  site: "https://graphlab.github.io",
+  base: "/landing-page",
   integrations: [tailwind(), sitemap(), mdx(), devtoolBreakpoints()],
   output: "static",
-  adapter: github({
-    // If this is a project repo (username.github.io/repo-name)
-    // Replace `repo-name` with the actual repository name
-    base: "/landing-page",
-  }),
 });
