@@ -2,7 +2,7 @@
   const form = document.getElementById("demoForm");
   const submitButton = form.querySelector('button[type="submit"]');
   const buttonText = document.getElementById("buttonText");
-  const successMessage = document.getElementById("successMessage");
+  const successMessage = document.getElementById("successMessageDemo");
 
   form.addEventListener("submit", async (e) => {
     e.preventDefault();
@@ -125,7 +125,7 @@
               <span id="buttonText">Book et møte</span>
             </button>
             <div
-              id="successMessage"
+              id="successMessageDemo"
               class="hidden mt-4 text-center text-green-800 bg-green-100 p-3 rounded-lg"
             >
               Takk for din henvendelse! Vi tar kontakt med deg snart.
