@@ -7,7 +7,7 @@ image:
   url: "/images/ai-success-rate.webp"
   alt: "Visualisering av AI-implementering i bedrifter"
 avatar:
-  url: "/images/graphlab-team.jpg"
+  url: "/images/graphlab-man-9.png"
   alt: "GraphLab Team"
 tags:
   [
