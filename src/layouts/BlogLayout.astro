@@ -7,21 +7,25 @@ import CtaThree from "@/components/cta/CtaThree.astro";
 <BaseLayout>
   <section>
     <img
-      class="w-full h-[60vh] 2xl:h-[40vh] object-cover "
+      class="w-full h-[60vh] 2xl:h-[40vh] object-cover"
       src={frontmatter.image.url}
       alt={frontmatter.image.alt}
     />
     <div
-      class="mx-auto md:px-12 px-8 max-w-7xl lg:px-24 w-full items-center py-12 lg:pb-24">
+      class="mx-auto md:px-12 px-8 max-w-7xl lg:px-24 w-full items-center py-12 lg:pb-24"
+    >
       <div>
         <div class="mx-auto prose-styles">
           <span class="uppercase tracking-wide font-medium text-regent-600">
-            ⏤ Written by: {frontmatter.author} on {
-              frontmatter.pubDate.toString().slice(0, 10)
+            ⏤ Skrevet av: {frontmatter.author}, {
+              new Date(frontmatter.pubDate).toLocaleDateString("nb-NO", {
+                day: "numeric",
+                month: "short",
+                year: "numeric",
+              })
             }
           </span>
-          <p
-            class="text-4xl lg:text-7xl        font-medium text-black uppercase">
+          <p class="text-4xl lg:text-7xl font-medium text-black uppercase">
             {frontmatter.title}
           </p>
           <p class="mx-auto font-medium text-regent-600">
@@ -32,7 +36,8 @@ import CtaThree from "@/components/cta/CtaThree.astro";
               frontmatter.tags.map((tag) => (
                 <a
                   class="text-regent-600  hover:text-regent-500 text-xs "
-                  href={`/tags/${tag}`}>
+                  href={`/tags/${tag}`}
+                >
                   {tag}
                 </a>
               ))

@@ -14,7 +14,7 @@ const allPosts = await getCollection("posts");
       <p
         class="text-2xl sm:text-3xl md:text-5xl lg:text-7xl font-medium text-black text-balance"
       >
-        GraphLab <span class="block italic">rapporterer </span>
+        Labrapport <span class="block italic"> </span>
       </p><p
         class="max-w-xl mt-4 text-lg text-black/80 mx-auto font-medium text-balance"
       >
@@ -31,20 +31,22 @@ const allPosts = await getCollection("posts");
         class="grid grid-cols-1 lg:grid-cols-3 sm:grid-cols-2 gap-y-12 gap-x-6"
       >
         {
-          allPosts
-            .slice()
-            .map((post) => (
-              <EntriesTwo
-                url={"/posts/" + post.slug}
-                title={post.data.title}
-                description={post.data.description}
-                alt={post.data.title}
-                pubDate={post.data.pubDate.toString().slice(0, 10)}
-                author={post.data.author}
-                image={post.data.image.url}
-                avatar={post.data.avatar.url}
-              />
-            ))
+          allPosts.slice().map((post) => (
+            <EntriesTwo
+              url={"/posts/" + post.slug}
+              title={post.data.title}
+              description={post.data.description}
+              alt={post.data.title}
+              pubDate={new Date(post.data.pubDate).toLocaleDateString("nb-NO", {
+                day: "numeric",
+                month: "short",
+                year: "numeric",
+              })}
+              author={post.data.author}
+              image={post.data.image.url}
+              avatar={post.data.avatar.url}
+            />
+          ))
         }
       </div>
     </div>

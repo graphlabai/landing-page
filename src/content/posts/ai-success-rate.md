@@ -1,6 +1,6 @@
 ---
 pubDate: 2024-10-31
-author: GraphLab Team
+author: Julian
 title: "Kun 26% av bedrifter lykkes med å skape verdi fra AI"
 description: "En ny BCG-rapport avslører at bare 26% av bedrifter oppnår verdiskapning fra AI-investeringer. Les hvordan GraphLab kan hjelpe din bedrift å bli blant de vellykkede."
 image:
