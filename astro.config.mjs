@@ -18,4 +18,10 @@ export default defineConfig({
   },
   site: "https://lexingtonthemes.com",
   integrations: [tailwind(), sitemap(), mdx(), devtoolBreakpoints()],
+  output: "static",
+  adapter: github({
+    // If this is a project repo (username.github.io/repo-name)
+    // Replace `repo-name` with the actual repository name
+    base: "/landing-page",
+  }),
 });
