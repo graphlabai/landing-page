@@ -9,7 +9,8 @@ import CtaThree from "@/components/cta/CtaThree.astro";
 <BaseLayout>
   <section class="bg-regent-500">
     <div
-      class="relative w-full mx-auto max-w-7xl items-center py-12 lg:px-24 lg:py-24 md:px-12 px-5">
+      class="relative w-full mx-auto max-w-7xl items-center py-12 lg:px-24 lg:py-24 md:px-12 px-5"
+    >
       <p class="text-2xl md:text-5xl lg:text-8xl font-medium text-black">
         Short and entertaining <span class="lg:block">
           writings from our tam</span
@@ -20,11 +21,7 @@ import CtaThree from "@/components/cta/CtaThree.astro";
       </p>
       <form class="mt-10 flex w-full max-w-lg">
         <div class="mt-3 flex w-full gap-1 text-center">
-          <label
-            for="email"
-            class="sr-only"
-            >Email Address</label
-          >
+          <label for="email" class="sr-only">Email Address</label>
           <input
             id="email"
             name="email"
@@ -37,7 +34,8 @@ import CtaThree from "@/components/cta/CtaThree.astro";
           <button
             type="submit"
             class="inline-flex items-center lg:text-xl justify-center w-auto lg:px-12 px-6 py-4 text-center text-black duration-200 bg-white font-medium rounded-full text-base focus:outline-none focus:ring-2 focus:ring-offset-2 hover:text-white focus:ring-regent-900 ring-offset-2 hover:bg-regent-900"
-            aria-label="Subscribe to newsletter">
+            aria-label="Subscribe to newsletter"
+          >
             Subscribe
           </button>
         </div>
@@ -47,18 +45,20 @@ import CtaThree from "@/components/cta/CtaThree.astro";
   <section>
     <div class="grid gap-12 lg:gap-0 lg:grid-cols-2 items-center">
       {
-        allPosts.slice().map((post) => (
-          <EntriesOne
-            url={"/posts/" + post.slug}
-            title={post.data.title}
-            description={post.data.description}
-            alt={post.data.title}
-            pubDate={post.data.pubDate.toString().slice(0, 10)}
-            author={post.data.author}
-            image={post.data.image.url}
-            avatar={post.data.avatar.url}
-          />
-        ))
+        allPosts
+          .slice()
+          .map((post) => (
+            <EntriesOne
+              url={"/posts/" + post.slug}
+              title={post.data.title}
+              description={post.data.description}
+              alt={post.data.title}
+              pubDate={post.data.pubDate.toString().slice(0, 10)}
+              author={post.data.author}
+              image={post.data.image.url}
+              avatar={post.data.avatar.url}
+            />
+          ))
       }
     </div>
   </section>

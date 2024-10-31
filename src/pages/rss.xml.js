@@ -1,11 +1,10 @@
-import rss, { pagesGlobToRssItems } from '@astrojs/rss';
+import rss, { pagesGlobToRssItems } from "@astrojs/rss";
 export async function GET(context) {
   return rss({
-     title: 'Lexington Themes',
-    description: 'Free and premium multipage themes and UI Kits For freelancers, developers, businesses, and personal use.Beautifully crafted with Astro.js, and Tailwind CSS — Simple & easy to customise.',
+    title: "GraphLab",
+    description:
+      "Vi hjelper innovative organisasjoner med å utvikle skreddersydde veikart, AI-strategiutvikling, compliance-rådgivning og teknisk implementering av AI-løsninger.",
     site: context.site,
-    items: await pagesGlobToRssItems(
-      import.meta.glob('./blog/*.{md,mdx}'),
-    ),
+    items: await pagesGlobToRssItems(import.meta.glob("./blog/*.{md,mdx}")),
   });
 }
