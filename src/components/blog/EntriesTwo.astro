@@ -3,14 +3,11 @@ const { title, url, description, image, author, authorImage, avatar, pubDate } =
   Astro.props;
 ---
 
-<a
-  href={url}
-  title={title}
-  class="group">
+<a href={url} title={title} class="group">
   <article class="flex-1 h-full flex flex-col">
     <div class="block w-full lg:col-span-2">
       <img
-        class="aspect-[384/246] object-cover bg-center h-full"
+        class="aspect-[384/246] object-cover bg-center h-full object-top"
         src={image}
         alt={title}
       />
@@ -20,7 +17,8 @@ const { title, url, description, image, author, authorImage, avatar, pubDate } =
         <p class="text-black font-medium lg:text-xl text-lg">{title}</p>
 
         <p
-          class="text-base text-gray-500 hover:text-regent-600 line-clamp-3 mt-6">
+          class="text-base text-gray-500 hover:text-regent-600 line-clamp-3 mt-6"
+        >
           {description}
         </p>
       </div>
